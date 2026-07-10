@@ -1,57 +1,143 @@
-document.addEventListener('DOMContentLoaded', function() {
-    // Smooth scrolling for navigation links
-    document.querySelectorAll('.nav-menu a, .hero-content .btn').forEach(anchor => {
-        anchor.addEventListener('click', function (e) {
-            e.preventDefault();
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luxury Real Estate Dubai | Elite Properties</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <a href="#" class="logo">Elite Properties Dubai</a>
+            <nav class="nav-menu">
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#properties">Properties</a></li>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="hamburger-menu">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </header>
 
-            const targetId = this.getAttribute('href').substring(1);
-            const targetElement = document.getElementById(targetId);
+    <main>
+        <section id="home" class="hero-section">
+            <div class="hero-content">
+                <h1>Discover Unrivalled Luxury in Dubai</h1>
+                <p>Your gateway to the most exclusive properties in the heart of the UAE.</p>
+                <a href="#properties" class="btn">Explore Properties</a>
+            </div>
+        </section>
 
-            if (targetElement) {
-                window.scrollTo({
-                    top: targetElement.offsetTop - (document.querySelector('.header').offsetHeight - 1), // Adjust for fixed header height
-                    behavior: 'smooth'
-                });
-                // Close mobile menu if open
-                if (document.querySelector('.nav-menu').classList.contains('active')) {
-                    document.querySelector('.nav-menu').classList.remove('active');
-                }
-            }
-        });
-    });
+        <section id="properties" class="properties-section container">
+            <h2>Featured Luxury Properties</h2>
+            <div class="property-grid">
+                <div class="property-card">
+                    <img src="https://via.placeholder.com/400x250/333/fff?text=Palm+Jumeirah+Villa" alt="Palm Jumeirah Villa">
+                    <div class="card-content">
+                        <h3>Palm Jumeirah Villa</h3>
+                        <p class="location"><i class="fas fa-map-marker-alt"></i> Palm Jumeirah, Dubai</p>
+                        <p class="price">AED 35,000,000</p>
+                        <p class="description">An exquisite beachfront villa with breathtaking sea views and private beach access.</p>
+                        <a href="#" class="btn-small">View Details</a>
+                    </div>
+                </div>
+                <div class="property-card">
+                    <img src="https://via.placeholder.com/400x250/333/fff?text=Downtown+Penthouse" alt="Downtown Penthouse">
+                    <div class="card-content">
+                        <h3>Downtown Penthouse</h3>
+                        <p class="location"><i class="fas fa-map-marker-alt"></i> Downtown Dubai</p>
+                        <p class="price">AED 22,500,000</p>
+                        <p class="description">Panoramic Burj Khalifa views from this stunning, high-floor penthouse apartment.</p>
+                        <a href="#" class="btn-small">View Details</a>
+                    </div>
+                </div>
+                <div class="property-card">
+                    <img src="https://via.placeholder.com/400x250/333/fff?text=Dubai+Hills+Estate" alt="Dubai Hills Estate Mansion">
+                    <div class="card-content">
+                        <h3>Dubai Hills Estate Mansion</h3>
+                        <p class="location"><i class="fas fa-map-marker-alt"></i> Dubai Hills Estate</p>
+                        <p class="price">AED 48,000,000</p>
+                        <p class="description">A sprawling mansion in a prestigious golf course community, offering ultimate privacy.</p>
+                        <a href="#" class="btn-small">View Details</a>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-    // Mobile navigation toggle
-    const hamburger = document.querySelector('.hamburger-menu');
-    const navMenu = document.querySelector('.nav-menu');
+        <section id="about" class="about-section">
+            <div class="container">
+                <h2>About Elite Properties</h2>
+                <div class="about-content">
+                    <p>Elite Properties is a bespoke luxury real estate agency dedicated to serving discerning clients in Dubai's high-end property market. With an unparalleled understanding of the local landscape and access to exclusive listings, we ensure a seamless and personalized experience in finding your dream home or investment opportunity.</p>
+                    <p>Our team of experienced professionals is committed to integrity, transparency, and achieving the best results for our clients. We don't just sell properties; we build relationships and help you embark on a luxurious lifestyle.</p>
+                </div>
+            </div>
+        </section>
 
-    if (hamburger && navMenu) {
-        hamburger.addEventListener('click', function() {
-            navMenu.classList.toggle('active');
-        });
-    }
+        <section id="contact" class="contact-section">
+            <div class="container">
+                <h2>Contact Us</h2>
+                <p>Reach out to our experts for a personalized consultation.</p>
+                <form class="contact-form">
+                    <div class="form-group">
+                        <label for="name">Name:</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Phone:</label>
+                        <input type="tel" id="phone" name="phone">
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message:</label>
+                        <textarea id="message" name="message" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="btn">Send Message</button>
+                </form>
+            </div>
+        </section>
+    </main>
 
-    // Sticky header (optional, if you want it to change style on scroll)
-    const header = document.querySelector('.header');
-    const heroSection = document.querySelector('.hero-section');
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <h3>Elite Properties Dubai</h3>
+                    <p>Your partner in Dubai's luxury real estate.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#properties">Properties</a></li>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-social">
+                    <h4>Follow Us</h4>
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 Elite Properties Dubai. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
 
-    if (header && heroSection) {
-        window.addEventListener('scroll', function() {
-            if (window.scrollY > heroSection.offsetHeight - header.offsetHeight) {
-                header.classList.add('scrolled'); // Add a class for different styles
-            } else {
-                header.classList.remove('scrolled');
-            }
-        });
-    }
-
-    // Form submission (basic example, typically this would send data to a backend)
-    const contactForm = document.querySelector('.contact-form');
-    if (contactForm) {
-        contactForm.addEventListener('submit', function(e) {
-            e.preventDefault();
-            alert('Thank you for your message! We will get back to you shortly.');
-            contactForm.reset(); // Clear the form
-            // In a real application, you would send this data to a server using fetch() or XMLHttpRequest
-        });
-    }
-});
+    <script src="script.js"></script>
+</body>
+</html>
