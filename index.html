@@ -1,30 +1,127 @@
-document.addEventListener('DOMContentLoaded', () => {
-    const hamburger = document.getElementById('hamburger');
-    const navMenu = document.querySelector('.nav-menu');
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dubai Luxury Estates</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Montserrat:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <a href="#">Dubai Estates</a>
+            </div>
+            <nav class="nav-menu">
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#properties">Properties</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </header>
 
-    hamburger.addEventListener('click', () => {
-        navMenu.classList.toggle('active');
-        hamburger.classList.toggle('open'); // Optional: for animating hamburger icon
-    });
+    <main>
+        <section id="home" class="hero-section">
+            <div class="hero-content">
+                <h1>Discover Unrivaled Luxury in Dubai</h1>
+                <p>Exclusive properties tailored for the discerning few.</p>
+                <a href="#properties" class="btn btn-primary">View Properties</a>
+            </div>
+        </section>
 
-    // Smooth scrolling for navigation links
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function (e) {
-            e.preventDefault();
-            const targetId = this.getAttribute('href');
-            const targetElement = document.querySelector(targetId);
+        <section id="properties" class="properties-section container">
+            <h2>Featured Properties</h2>
+            <div class="property-grid">
+                <div class="property-card">
+                    <img src="https://via.placeholder.com/400x250/F0E68C/555555?text=Luxury+Villa" alt="Luxury Villa">
+                    <h3>Palm Jumeirah Villa</h3>
+                    <p>6 Bedrooms | 7 Bathrooms | 12,000 sqft</p>
+                    <span class="price">AED 35,000,000</span>
+                    <a href="#" class="btn btn-secondary">Details</a>
+                </div>
+                <div class="property-card">
+                    <img src="https://via.placeholder.com/400x250/D2B48C/555555?text=Downtown+Penthouse" alt="Downtown Penthouse">
+                    <h3>Downtown Penthouse</h3>
+                    <p>4 Bedrooms | 5 Bathrooms | 7,500 sqft</p>
+                    <span class="price">AED 28,000,000</span>
+                    <a href="#" class="btn btn-secondary">Details</a>
+                </div>
+                <div class="property-card">
+                    <img src="https://via.placeholder.com/400x250/BDB76B/555555?text=Emirates+Hills+Mansion" alt="Emirates Hills Mansion">
+                    <h3>Emirates Hills Mansion</h3>
+                    <p>8 Bedrooms | 10 Bathrooms | 25,000 sqft</p>
+                    <span class="price">AED 80,000,000</span>
+                    <a href="#" class="btn btn-secondary">Details</a>
+                </div>
+            </div>
+        </section>
 
-            if (targetElement) {
-                window.scrollTo({
-                    top: targetElement.offsetTop - (document.querySelector('.header').offsetHeight || 0), // Adjust for fixed header
-                    behavior: 'smooth'
-                });
-                // Close mobile menu after clicking a link
-                if (navMenu.classList.contains('active')) {
-                    navMenu.classList.remove('active');
-                    hamburger.classList.remove('open');
-                }
-            }
-        });
-    });
-});
+        <section id="services" class="services-section">
+            <div class="container">
+                <h2>Our Services</h2>
+                <div class="service-grid">
+                    <div class="service-card">
+                        <i class="fas fa-key icon"></i>
+                        <h3>Property Sales</h3>
+                        <p>Expert guidance through the entire buying process for luxury properties.</p>
+                    </div>
+                    <div class="service-card">
+                        <i class="fas fa-handshake icon"></i>
+                        <h3>Consultation</h3>
+                        <p>Personalized advice on real estate investment opportunities in Dubai.</p>
+                    </div>
+                    <div class="service-card">
+                        <i class="fas fa-chart-line icon"></i>
+                        <h3>Market Analysis</h3>
+                        <p>In-depth market insights to help you make informed decisions.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="about-section container">
+            <h2>About Dubai Estates</h2>
+            <p>Dubai Estates is a premier luxury real estate agency dedicated to connecting discerning clients with their dream properties in Dubai. With unparalleled market knowledge and a commitment to excellence, we offer a bespoke service that ensures a seamless and exclusive experience.</p>
+            <p>Our portfolio showcases the most exquisite villas, penthouses, and apartments in Dubai's most prestigious locations, from the iconic Palm Jumeirah to the vibrant Downtown Dubai.</p>
+        </section>
+
+        <section id="contact" class="contact-section">
+            <div class="container">
+                <h2>Contact Us</h2>
+                <p>Ready to find your perfect luxury property? Get in touch with our experts today.</p>
+                <form class="contact-form">
+                    <input type="text" placeholder="Your Name" required>
+                    <input type="email" placeholder="Your Email" required>
+                    <textarea placeholder="Your Message"></textarea>
+                    <button type="submit" class="btn btn-primary">Send Message</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2023 Dubai Luxury Estates. All rights reserved.</p>
+            <div class="social-links">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
