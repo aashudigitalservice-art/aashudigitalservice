@@ -1,143 +1,552 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Luxury Real Estate Dubai | Elite Properties</title>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-</head>
-<body>
-    <header class="header">
-        <div class="container">
-            <a href="#" class="logo">Elite Properties Dubai</a>
-            <nav class="nav-menu">
-                <ul>
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#properties">Properties</a></li>
-                    <li><a href="#about">About Us</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </nav>
-            <div class="hamburger-menu">
-                <i class="fas fa-bars"></i>
-            </div>
-        </div>
-    </header>
+/* General Styles & Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-    <main>
-        <section id="home" class="hero-section">
-            <div class="hero-content">
-                <h1>Discover Unrivalled Luxury in Dubai</h1>
-                <p>Your gateway to the most exclusive properties in the heart of the UAE.</p>
-                <a href="#properties" class="btn">Explore Properties</a>
-            </div>
-        </section>
+body {
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f8f8f8;
+}
 
-        <section id="properties" class="properties-section container">
-            <h2>Featured Luxury Properties</h2>
-            <div class="property-grid">
-                <div class="property-card">
-                    <img src="https://via.placeholder.com/400x250/333/fff?text=Palm+Jumeirah+Villa" alt="Palm Jumeirah Villa">
-                    <div class="card-content">
-                        <h3>Palm Jumeirah Villa</h3>
-                        <p class="location"><i class="fas fa-map-marker-alt"></i> Palm Jumeirah, Dubai</p>
-                        <p class="price">AED 35,000,000</p>
-                        <p class="description">An exquisite beachfront villa with breathtaking sea views and private beach access.</p>
-                        <a href="#" class="btn-small">View Details</a>
-                    </div>
-                </div>
-                <div class="property-card">
-                    <img src="https://via.placeholder.com/400x250/333/fff?text=Downtown+Penthouse" alt="Downtown Penthouse">
-                    <div class="card-content">
-                        <h3>Downtown Penthouse</h3>
-                        <p class="location"><i class="fas fa-map-marker-alt"></i> Downtown Dubai</p>
-                        <p class="price">AED 22,500,000</p>
-                        <p class="description">Panoramic Burj Khalifa views from this stunning, high-floor penthouse apartment.</p>
-                        <a href="#" class="btn-small">View Details</a>
-                    </div>
-                </div>
-                <div class="property-card">
-                    <img src="https://via.placeholder.com/400x250/333/fff?text=Dubai+Hills+Estate" alt="Dubai Hills Estate Mansion">
-                    <div class="card-content">
-                        <h3>Dubai Hills Estate Mansion</h3>
-                        <p class="location"><i class="fas fa-map-marker-alt"></i> Dubai Hills Estate</p>
-                        <p class="price">AED 48,000,000</p>
-                        <p class="description">A sprawling mansion in a prestigious golf course community, offering ultimate privacy.</p>
-                        <a href="#" class="btn-small">View Details</a>
-                    </div>
-                </div>
-            </div>
-        </section>
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
 
-        <section id="about" class="about-section">
-            <div class="container">
-                <h2>About Elite Properties</h2>
-                <div class="about-content">
-                    <p>Elite Properties is a bespoke luxury real estate agency dedicated to serving discerning clients in Dubai's high-end property market. With an unparalleled understanding of the local landscape and access to exclusive listings, we ensure a seamless and personalized experience in finding your dream home or investment opportunity.</p>
-                    <p>Our team of experienced professionals is committed to integrity, transparency, and achieving the best results for our clients. We don't just sell properties; we build relationships and help you embark on a luxurious lifestyle.</p>
-                </div>
-            </div>
-        </section>
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Playfair Display', serif;
+    color: #1a1a1a;
+    margin-bottom: 15px;
+}
 
-        <section id="contact" class="contact-section">
-            <div class="container">
-                <h2>Contact Us</h2>
-                <p>Reach out to our experts for a personalized consultation.</p>
-                <form class="contact-form">
-                    <div class="form-group">
-                        <label for="name">Name:</label>
-                        <input type="text" id="name" name="name" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="email">Email:</label>
-                        <input type="email" id="email" name="email" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="phone">Phone:</label>
-                        <input type="tel" id="phone" name="phone">
-                    </div>
-                    <div class="form-group">
-                        <label for="message">Message:</label>
-                        <textarea id="message" name="message" rows="5" required></textarea>
-                    </div>
-                    <button type="submit" class="btn">Send Message</button>
-                </form>
-            </div>
-        </section>
-    </main>
+p {
+    margin-bottom: 10px;
+}
 
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-brand">
-                    <h3>Elite Properties Dubai</h3>
-                    <p>Your partner in Dubai's luxury real estate.</p>
-                </div>
-                <div class="footer-links">
-                    <h4>Quick Links</h4>
-                    <ul>
-                        <li><a href="#home">Home</a></li>
-                        <li><a href="#properties">Properties</a></li>
-                        <li><a href="#about">About Us</a></li>
-                        <li><a href="#contact">Contact</a></li>
-                    </ul>
-                </div>
-                <div class="footer-social">
-                    <h4>Follow Us</h4>
-                    <a href="#"><i class="fab fa-facebook-f"></i></a>
-                    <a href="#"><i class="fab fa-twitter"></i></a>
-                    <a href="#"><i class="fab fa-instagram"></i></a>
-                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2023 Elite Properties Dubai. All rights reserved.</p>
-            </div>
-        </div>
-    </footer>
+a {
+    text-decoration: none;
+    color: #b08968;
+}
 
-    <script src="script.js"></script>
-</body>
-</html>
+a:hover {
+    color: #a47d5c;
+}
+
+ul {
+    list-style: none;
+}
+
+.btn {
+    display: inline-block;
+    background-color: #b08968;
+    color: #fff;
+    padding: 12px 25px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.btn:hover {
+    background-color: #a47d5c;
+}
+
+.btn-small {
+    display: inline-block;
+    background-color: #b08968;
+    color: #fff;
+    padding: 8px 15px;
+    border-radius: 3px;
+    transition: background-color 0.3s ease;
+    font-size: 0.9em;
+}
+
+.btn-small:hover {
+    background-color: #a47d5c;
+}
+
+/* Header */
+.header {
+    background-color: rgba(255, 255, 255, 0.95);
+    padding: 20px 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.8em;
+    font-weight: 700;
+    color: #1a1a1a;
+}
+
+.logo:hover {
+    color: #b08968;
+}
+
+.nav-menu ul {
+    display: flex;
+}
+
+.nav-menu ul li {
+    margin-left: 30px;
+}
+
+.nav-menu ul li a {
+    color: #333;
+    font-weight: 500;
+    font-size: 1.05em;
+    transition: color 0.3s ease;
+    position: relative;
+}
+
+.nav-menu ul li a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background-color: #b08968;
+    left: 0;
+    bottom: -5px;
+    transition: width 0.3s ease;
+}
+
+.nav-menu ul li a:hover::after {
+    width: 100%;
+}
+
+.hamburger-menu {
+    display: none;
+    font-size: 1.8em;
+    cursor: pointer;
+    color: #333;
+}
+
+/* Hero Section */
+.hero-section {
+    background: url('https://via.placeholder.com/1920x1080/000/fff?text=Dubai+Skyline+Luxury') no-repeat center center/cover;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    text-align: center;
+    position: relative;
+    margin-top: -90px; /* Adjust for fixed header */
+    padding-top: 90px;
+}
+
+.hero-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+    max-width: 800px;
+}
+
+.hero-content h1 {
+    font-size: 4em;
+    margin-bottom: 20px;
+    color: #fff;
+    line-height: 1.1;
+}
+
+.hero-content p {
+    font-size: 1.4em;
+    margin-bottom: 30px;
+    color: #eee;
+}
+
+/* Sections */
+section {
+    padding: 80px 0;
+}
+
+section:nth-of-type(even) {
+    background-color: #f1f1f1;
+}
+
+h2 {
+    text-align: center;
+    font-size: 2.8em;
+    margin-bottom: 40px;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+h2::after {
+    content: '';
+    position: absolute;
+    width: 80px;
+    height: 3px;
+    background-color: #b08968;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 0;
+}
+
+/* Properties Section */
+.property-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.property-card {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.property-card:hover {
+    transform: translateY(-10px);
+}
+
+.property-card img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    display: block;
+}
+
+.card-content {
+    padding: 25px;
+}
+
+.card-content h3 {
+    font-size: 1.8em;
+    margin-bottom: 10px;
+    color: #1a1a1a;
+}
+
+.card-content .location {
+    color: #666;
+    font-size: 0.95em;
+    margin-bottom: 10px;
+}
+
+.card-content .location i {
+    margin-right: 5px;
+    color: #b08968;
+}
+
+.card-content .price {
+    font-size: 1.4em;
+    font-weight: 700;
+    color: #b08968;
+    margin-bottom: 15px;
+}
+
+.card-content .description {
+    font-size: 0.95em;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+/* About Section */
+.about-section .about-content {
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.about-section .about-content p {
+    font-size: 1.1em;
+    color: #444;
+    margin-bottom: 20px;
+}
+
+/* Contact Section */
+.contact-section {
+    text-align: center;
+}
+
+.contact-section p {
+    font-size: 1.1em;
+    margin-bottom: 30px;
+    color: #555;
+}
+
+.contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    text-align: left;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+    color: #333;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="tel"],
+.form-group textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1em;
+    color: #333;
+    transition: border-color 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: #b08968;
+    outline: none;
+}
+
+.contact-form .btn {
+    width: 100%;
+    border: none;
+    cursor: pointer;
+    font-size: 1.1em;
+    padding: 15px 0;
+}
+
+/* Footer */
+.footer {
+    background-color: #1a1a1a;
+    color: #eee;
+    padding: 50px 0 20px;
+    font-size: 0.95em;
+}
+
+.footer .footer-content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-bottom: 30px;
+}
+
+.footer-brand,
+.footer-links,
+.footer-social {
+    flex: 1;
+    min-width: 250px;
+    margin-bottom: 20px;
+}
+
+.footer-brand h3 {
+    color: #fff;
+    font-size: 1.8em;
+    margin-bottom: 15px;
+}
+
+.footer-brand p {
+    color: #ccc;
+}
+
+.footer-links h4,
+.footer-social h4 {
+    color: #b08968;
+    font-size: 1.2em;
+    margin-bottom: 15px;
+}
+
+.footer-links ul li a {
+    color: #ccc;
+    display: block;
+    padding: 5px 0;
+}
+
+.footer-links ul li a:hover {
+    color: #fff;
+}
+
+.footer-social a {
+    color: #fff;
+    font-size: 1.5em;
+    margin-right: 15px;
+    transition: color 0.3s ease;
+}
+
+.footer-social a:hover {
+    color: #b08968;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 20px;
+    border-top: 1px solid #333;
+}
+
+.footer-bottom p {
+    color: #ccc;
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+    .nav-menu {
+        display: none;
+    }
+
+    .hamburger-menu {
+        display: block;
+    }
+
+    .header .container {
+        padding: 0 15px;
+    }
+
+    .hero-content h1 {
+        font-size: 3em;
+    }
+
+    .hero-content p {
+        font-size: 1.2em;
+    }
+
+    .property-grid {
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-content h1 {
+        font-size: 2.5em;
+    }
+
+    .hero-content p {
+        font-size: 1em;
+    }
+
+    h2 {
+        font-size: 2em;
+    }
+
+    .contact-form {
+        padding: 30px;
+    }
+
+    .footer .footer-content {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .footer-brand, .footer-links, .footer-social {
+        margin-bottom: 30px;
+    }
+
+    .footer-links ul {
+        padding: 0;
+    }
+
+    .footer-social a {
+        margin: 0 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo {
+        font-size: 1.5em;
+    }
+
+    .hero-content h1 {
+        font-size: 2em;
+    }
+
+    .hero-content p {
+        font-size: 0.9em;
+    }
+
+    .btn {
+        padding: 10px 20px;
+        font-size: 0.9em;
+    }
+
+    h2 {
+        font-size: 1.8em;
+    }
+
+    section {
+        padding: 60px 0;
+    }
+
+    .card-content h3 {
+        font-size: 1.5em;
+    }
+
+    .card-content .price {
+        font-size: 1.2em;
+    }
+
+    .contact-form {
+        padding: 20px;
+    }
+
+    .footer-brand h3 {
+        font-size: 1.5em;
+    }
+}
+
+/* Navigation for mobile (JS will toggle this) */
+.nav-menu.active {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.98);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    padding: 20px 0;
+}
+
+.nav-menu.active ul {
+    flex-direction: column;
+    text-align: center;
+}
+
+.nav-menu.active ul li {
+    margin: 10px 0;
+}
+
+.nav-menu.active ul li a {
+    color: #1a1a1a;
+    padding: 10px 0;
+    display: block;
+}
+
+.nav-menu.active ul li a::after {
+    background-color: #1a1a1a;
+}
